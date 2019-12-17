@@ -1,0 +1,41 @@
+
+
+/* *************** HEADER**************** */
+header {
+    text-align: center;
+    height:100vh;
+    background: url(media/header.jpg) no-repeat fixed;
+    background-size: cover;
+}
+h1 {
+    padding: 160px 0 20px 0;
+    font-size: 5em;
+    text-transform: uppercase;
+}
+.line {
+    height: 1px;
+    background-color: grey;
+    width: 500px;
+    margin: 0 auto;
+}
+h2 {
+    padding: 30px 0 130px 0;
+    font-size: 3.3em;
+    text-transform: uppercase;
+}
+.infos {
+    border: 1px solid grey;
+}
+
+header button {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* **************** FOOTER ******************* */
+footer {
+    background: url(media/footer.jpg) 50% 0% no-repeat fixed  ;
+    background-size: cover;
+    text-align: center;
+    height: 800px;
+}
