@@ -7,7 +7,7 @@
       $(function () {
           $(window).scroll(function () {
               if ($(this).scrollTop() > 100) {
-                  $('.navbar').fadeIn();
+                //   $('.navbar').fadeOut();
               } else {
                   $('.navbar').fadeOut();
               }
@@ -18,21 +18,11 @@
 }(jQuery));
 
 //TEXTE INTRO
-$(document).ready(function() {
-
-    'use strict';
-
-const typed = $(".text");
-
-    $(function() {
-        typed.typed({
-            strings: ["Après 7 ans de carrière dans la logistique où j'ai occupé des postes de Responsable de Stock et d'Adjoint d'exploitation pour des groupes internationaux, j'ai décidé de me reconvertir dans le développement web. Depuis Août 2019 je me suis lancé en autodidacte dans l’apprentissage des langages les plus populaires (JS, HTML, CSS...) afin de me donner un socle de compétence. Après 2 mois de cours j'ai décidé qu'il serait judicieux de me spécialiser et d'essayer de devenir le plus rapidement possible expert d'un language, ce language est PHP et son framework Symfony."],
-//            typeSpeed: 0.01,
-            loop: false,
-        });
-    });
-});
-
+var typed = new Typed('.typed', {
+    strings: ["Bonjour à tous et à toutes, je me présente je m'appelle", "Passionné d'informatique depuis ma plus tendre enfance j'ai eu un parcours de vie qui m'a malheureusement éloigné de ma passion pendants quelques temps. Il y a quelques moi j'ai décidé de quitter mon ennuyant travail dans l'administration pour me lancer à fond dans ma passion d'enfance, je me suis mis à coder, apprendre, dévorer les documentations techniques, Pendant des jours, des semaines puis des mois... Aujourd'hui je me présente devant vous en tant que Développeur Web Front-end autodidacte passioné et surmotivé."],
+    typeSpeed: 30
+  });
+    
   /// FORMULAIRE
   $(function()
 {
