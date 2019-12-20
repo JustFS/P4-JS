@@ -361,6 +361,7 @@ p.ism-badge a.ism-link:hover {
 
 #my-slider .ism-slide-0 .ism-img-frame {
     width: 100%;
+    background-size: cover;
 }
 
 #my-slider .ism-slide-0 .ism-img {

@@ -1,5 +1,3 @@
-
-
 /* *************** HEADER**************** */
 header {
     text-align: center;
@@ -11,10 +9,21 @@ h1 {
     padding: 140px 0 20px 0;
     font-size: 5em;
     text-transform: uppercase;
+
+    animation: title ease-in-out 1.0s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards; /*when the spec is finished*/
+}
+@keyframes title {
+    0% { opacity:0;
+    }
+    100% { opacity:1;
+    }
 }
 .line {
     height: 1px;
-    background-color: grey;
+    background-color: #726659;
     width: 500px;
     margin: 0 auto;
 }
@@ -22,9 +31,20 @@ h2 {
     padding: 30px 0 80px 0;
     font-size: 3.3em;
     text-transform: uppercase;
+
+    animation: title ease-in-out 3.0s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards; /*when the spec is finished*/
+}
+@keyframes title {
+    0% { opacity:0;
+    }
+    100% { opacity:1;
+    }
 }
 .infos {
-    border: 1px solid grey;
+    border: 1px solid #726659;
 }
 .typed {
     font-size: 1.2em;
@@ -33,24 +53,24 @@ header .button {
     margin: 0 auto;
     margin-top: 50px;
     padding: 20px 80px;
-    border: 1px solid grey;
+    border: 1px solid #726659;
     width: 300px;
 }
 .navbar {
     background-color: #FAFAFA;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #726659;
     opacity: 0.9;
 
 }
 /* ******************** SKILLS ********************* */
 .containerBis {
-    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.8));
+    /* filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.8)); */
     margin: 0 !important;
 }
 .languages {
     position: relative;
     padding: 50px;
-    margin: 150px 50px 0 40px;
+    margin: 40px 50px 0 40px;
     height: 500px;
     width: 45%;
     max-width: 600px;
@@ -58,11 +78,36 @@ header .button {
     background: linear-gradient(to right, rgba(252,234,187,1) 0%, rgba(252,205,77,0.99) 3%, rgba(251,218,129,0.75) 74%, rgba(251,223,147,0.75) 99%);
     clip-path: polygon(3% 10%, 97% 5%, 93% 97%, 3% 88%);
 
+    animation: title ease-in 2s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
 }
+
+@keyframes title{
+  0% {
+    opacity:0;
+    transform:  translate(-303px,0px)  ;
+  }
+  19% {
+    opacity:0.056786377935697636;
+    transform:  translate(-194px,1px)  ;
+  }
+  69% {
+    opacity:0.5410779714241515;
+    transform:  translate(62px,-1px)  ;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(-23px,1px)  ;
+  }
+}
+
+
 .formation {
     float: right;
     position: relative;
-    margin: -50px 30px 200px 0;
+    margin: 150px 30px 200px 0;
     padding: 15px 0 0 65px; 
     height: 500px;
     width: 700px;
@@ -70,7 +115,7 @@ header .button {
     clip-path: polygon(5% 0, 100% 5%, 100% 89%, 0% 100%);
 }
 .otherSkills {
-    margin: 550px 50px 200px 50px !important;
+    margin: 320px 50px 200px 50px !important;
     height: 500px;
     width: 60%;
     background: green;
@@ -81,15 +126,16 @@ header .button {
 /* ****************PORTFOLIO + HOBBIES ***************** */
 
 .transition {
-    height: 270px;
-    margin: -60px 0 -350px 0;
+    height: 450px;
+    margin: -160px 0 -350px 0;
     background: url(./media/footer.jpg) no-repeat fixed;
     background-size: cover;
-    z-index: 1000;
+    z-index: 100;
 }
 
-.hoobies {
-    padding: 400px 50px 350px 50px;
+.hobbies {
+    padding: 300px 50px 250px 50px;
+    margin: 560px 0 0 0;
     clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0% 100%);
     background-color: yellow;
 }
@@ -102,70 +148,110 @@ header .button {
     width: 300px;
     height: 300px;
     perspective: 1000px;
-  }
-  
+}
 .flip-box-inner {
     position: relative;
     width: 100%;
     height: 100%;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
+}
 .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
-  }
-  
+}
 .flip-box-front, .flip-box-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-  }
+}
 .flip-box-back {
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
-  }
-
+}
 
 /* **************** FOOTER ******************* */
 footer {
     background: url(media/footer.jpg) 50% 0% no-repeat fixed  ;
     background-size: cover;
     text-align: center;
-    height: 1050px;
-    margin-top: 150px;
-    padding: 150px 50px;
+    height: 950px;
+    padding: 50px 50px;
     clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
-    margin-top: -100px;
+    margin-top: -820px;
 }
 footer h3 {
     padding: 100px 0 80px 0;
 }
-footer a {
+.network {
     font-size: 4em;
-    border: 1px solid grey;
+    border: 1px solid #726659;
     border-radius: 50%;
     padding: 30px 45px;
+    color: #726659;
 }
+
 #contact {
     padding-top: 100px;
 }
-.arrow-div {
-    padding: 20px;
-}
-.arrow {
+#form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+    }
+input {
+    font-size: 0.875em;
+    width: 470px;
     height: 50px;
+    padding: 0px 15px 0px 15px;
+    background: transparent;
+    outline: none;
+    color: #726659;
+    border: solid 1px #b3aca7;
+    }
+textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+    color: #726659;
+    font-size: 0.875em;
+    border: solid 1px #b3aca7;
+}
+.network:hover, textarea:hover, input:hover, #submit:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+    transition: all 0.3s ease-in-out;
+    }
+input::placeholder, textarea::placeholder, input:focus::placeholder, textarea:focus::placeholder {
+    color: #aca49c;
+    }
+input:hover::placeholder,textarea:hover::placeholder, input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+    color: #e2dedb;
+    }
+#submit {
+    background: transparent;
+    border: solid 1px #b3aca7;
+    padding: 20px 55px;
+}
+
+.arrow {
     width: 50px;
-    background-color: black;
     margin: 0 auto;
-    clip-path: polygon(0 61%, 50% 29%, 100% 61%, 100% 78%, 50% 55%, 0 78%);
+    padding-top: 65px;
 }
-.arrow-div:hover .arrow {
-    transform: scale(1.2);
-    color: white;
+.arrow a {
+    font-size: 3em;
+    border: none;
+    color: #726659;
+}
+.arrow:hover i {
+    transform: scale(2);
     transition: 0.3s;
-}
-footer p {
-    padding-top: 40px;
+    color: #726659;
+
 }

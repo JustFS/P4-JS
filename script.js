@@ -2,18 +2,18 @@
 /// NAVBAR
 
     $(document).ready(function(){
-      $(".navbar").hide();
-      
-      $(function () {
-          $(window).scroll(function () {
-              if ($(this).scrollTop() > 100) {
+    $(".navbar").hide();
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
                 //   $('.navbar').fadeOut();
-              } else {
-                  $('.navbar').fadeOut();
-              }
-          });
-      });
-  });
+            } else {
+                $('.navbar').fadeOut();
+            }
+        });
+    });
+});
 
 }(jQuery));
 
@@ -86,3 +86,6 @@ var typed = new Typed('.typed', {
         
       });	
 });
+
+// PARALLAX
+var rellax = new Rellax('.rellax');
