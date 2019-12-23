@@ -6,8 +6,8 @@
 
     $(function () {
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                //   $('.navbar').fadeOut();
+            if ($(this).scrollTop() > 500) {
+                // $('.navbar').fadeIn();
             } else {
                 $('.navbar').fadeOut();
             }
@@ -20,11 +20,10 @@
 //TEXTE INTRO
 var typed = new Typed('.typed', {
     strings: ["Bonjour à tous et à toutes, je me présente je m'appelle", "Passionné d'informatique depuis ma plus tendre enfance j'ai eu un parcours de vie qui m'a malheureusement éloigné de ma passion pendants quelques temps. Il y a quelques moi j'ai décidé de quitter mon ennuyant travail dans l'administration pour me lancer à fond dans ma passion d'enfance, je me suis mis à coder, apprendre, dévorer les documentations techniques, Pendant des jours, des semaines puis des mois... Aujourd'hui je me présente devant vous en tant que Développeur Web Front-end autodidacte passioné et surmotivé."],
-    typeSpeed: 30
-  });
+    typeSpeed: 30});
     
   /// FORMULAIRE
-  $(function()
+$(function()
 {
     function after_form_submitted(data) 
     {
@@ -62,7 +61,7 @@ var typed = new Typed('.typed', {
     }
 
 	$('#reused_form').submit(function(e)
-      {
+    {
         e.preventDefault();
 
         $form = $(this);
@@ -84,8 +83,15 @@ var typed = new Typed('.typed', {
                 dataType: 'json' 
             });        
         
-      });	
+    });	
 });
 
 // PARALLAX
 var rellax = new Rellax('.rellax');
+
+// AOS
+AOS.init({
+    easing: 'ease-in-out-sine'
+  });
+
+// SWUP

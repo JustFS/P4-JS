@@ -11,24 +11,26 @@
     <link href="./style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/carousel/css/my-slider.css"/>
     <link href="./assets/bootstrap.css" rel="stylesheet">
+    <link href="./assets/js/aos-master/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-    <header class="rellax" data-rellax-speed="2">
+    <header>
         <h1>JEAN Scratch</h1>
         <div class="line"></div>
         <h2>Développeur web</h2>
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 infos"><h5><i class="fa fa-compass"></i> Mérignac</h5>
-                <h5><i class="fa fa-user"></i> 31 ans</h5>
-                <h5><i class="fa fa-phone"></i> 06 59 08 45 50</h5>
+                <div class="col-lg-3 infos">
+                    <h5><i class="fa fa-user"></i> 27 ans</h5>
+                    <h5><i class="fa fa-compass"></i> Bordeaux</h5>
+                    <h5><i class="fa fa-phone"></i> 06 59 59 59 59</h5>
                 </div>
                 <div class="col-lg-6"><span class="typed"></span></div>
-                <div class="col-lg-3 infos"><img src="./media/billGates.jpg" alt="photoCandidat"></div>
+                <div class="col-lg-3 photo"><img src="./media/billGates.jpg" alt="photoCandidat"></div>
             </div>
         </div>
         
@@ -58,8 +60,8 @@
     </nav>
 
 
-        <div class="containerBis rellax" data-rellax-speed="2">
-            <div class="languages">
+        <div class="langages rellax aos-item" data-rellax-speed="4" data-aos="fade-down-right" data-aos-once="true">
+            <div class="aos-item__inner">
                 <h3>LANGUAGES & FRAMEWORKS</h3>
                 <div class="bar"><img src="media/html.png"> HTML</div>
                 <div class="progress">
@@ -91,90 +93,170 @@
                 </div>
             </div>
         </div>
-        <div class="containerBis rellax" data-rellax-speed="4">
-            <div class="formation">
+        <div class="formation rellax aos-item" 
+            data-rellax-speed="8" 
+            data-aos="fade-down-left" 
+            data-aos-once="true"
+            data-aos-offset="-200">
+            <div class="aos-item__inner">
                 <h3>FORMATION</h3>
-                <h4><i class="fa fa-university"></i> OpenClassRooms</h4>
-                <button class="btn" onclick="boutonFunction()"> + </button>
-                <div id="ocr">
-                    <ul>
-                        <!-- <li>&rarr; Apprenez à créer votre site web avec HTML5 et CSS3 (100%)</li>
-                        <li>&rarr; Apprenez à coder en JavaScript (100%)</li>
-                        <li>&rarr; Ecrivez du Javascript pour le web (89%)</li>
-                        <li>&rarr; Démarrez votre projet en Java (100%)</li> -->
-                    </ul>
+                <div class="aos-item" 
+                    data-aos="zoom-in-left"
+                    data-aos-offset="-200"
+                    data-aos-once="true">
+                    <div class="aos-item__inner">
+                        <h4><i class="fa fa-university"></i> OpenClassRooms</h4>
+                        <div id="ocr">
+                            <ul>
+                                <li>Apprenez à créer votre site web avec HTML5 et CSS3 (100%)</li>
+                                <li>Apprenez à coder en JavaScript (100%)</li>
+                                <li>Ecrivez du Javascript pour le web (95%)</li>
+                                <li>Simplifiez-vous le CSS avec SASS (100%)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <h4><i class="fa fa-university"></i> FreeCodeCamp.com</h4>
-                <button class="btn" onclick="boutonFunction1()">  + </button>
-                <div id="fcc">
-                    <!-- <ul>
-                        <li>&rarr; 393 "coding challenges" accomplis</li>
-                        <li>&rarr; 6 projets réalisés</li>
-                    </ul> -->
+                <div class="aos-item" 
+                    data-aos="zoom-in-right"
+                    data-aos-offset="-250"
+                    data-aos-once="true">
+                    <div class="aos-item__inner">
+                        <h4><i class="fa fa-university"></i> FreeCodeCamp.com</h4>
+                        <div id="fcc">
+                            <ul>
+                                <li>3893 "coding challenges" accomplis</li>
+                                <li>8 projets réalisés</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <h4><i class="fa fa-university"></i> Udemy</h4>
-                <button class="btn" onclick="boutonFunction2()"> + </button>
-                <div id="udemy">
-                    <ul>
-                        <!-- <li>&rarr; Formation complète développeur web (40h de vidéo avec HTML, CSS, jQuery, Bootstrap, MySQL, PHP, Wordpress</li>
-                        <li>&rarr; Vraiment bien comprendre Javascript (10h de vidéo sur JS ES6)</li>
-                        <li>&rarr; Devenez développeur Java (12h de cours vidéo)</li> -->
-                    </ul>
+                <div class="aos-item" 
+                    data-aos="zoom-out-up"
+                    data-aos-offset="-300"
+                    data-aos-once="true">
+                    <div class="aos-item__inner">
+                        <h4><i class="fa fa-university"></i> Youtube</h4>
+                        <div id="udemy">
+                            <ul>
+                                <li>Grafikart</li>
+                                <li>The net ninja</li>
+                                <li>From Scratch</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-   
-        <div class="containerBis rellax" data-rellax-speed="-1">
-            <div class="otherSkills">
-                <h3>AUTRES COMPÉTENCES</h3>
-                <div class="wordCloud">
-                    <p>Github</p>
-                    <p>Méthodes agiles</p>
-                    <p>Anglais courant</p>
-                    <p>Photoshop</p>
-                    <p>SEO</p>
-                    <p>UX Design</p>
-                </div>
-            </div>
-        </div>
-
     <div class="carousel">
+        <h3>PORTFOLIO</h3>
         <div class="ism-slider" data-play_type="loop" data-image_fx="zoompan" id="my-slider">
             <ol>
                 <li>
-                    <a href="" target="_blank">
+                    <a href="./media/portfolio/P.1/" target="_blank">
                     <img src="assets/carousel/image/slides/_u/1576690220847_909451.jpg">
-                    <a class="ism-caption ism-caption-0" href="" target="_blank" data-delay='500'>HTML + CSS</a>
+                    <a class="ism-caption ism-caption-0" href="./media/portfolio/P.1/" target="_blank" data-delay='500'>HTML + CSS</a>
                     </a>
                 </li>
                 <li>
-                    <a href="" target="_self">
+                    <a href="/media/portfolio/P.2/" target="_self">
                     <img src="assets/carousel/image/slides/_u/1576690248759_611926.jpg">
-                    <a class="ism-caption ism-caption-0" href="" target="_self" data-delay='500'>BOOTSTRAP</a>
+                    <a class="ism-caption ism-caption-0" href="/media/portfolio/P.2" target="_self" data-delay='500'>BOOTSTRAP</a>
                     </a>
                 </li>
                 <li>
-                    <a href="" target="_self">
+                    <a href="/media/portfolio/P.3" target="_self">
                     <img src="assets/carousel/image/slides/_u/1576690266110_240161.jpg">
-                    <a class="ism-caption ism-caption-0" href="" target="_self" data-delay='500'>SASS + JQUERY</a>
+                    <a class="ism-caption ism-caption-0" href="/media/portfolio/P.3" target="_self" data-delay='500'>SASS + JQUERY</a>
                     </a>
                 </li>
             </ol>
         </div>
     </div>
 
-    <div class="transition"></div>
+    <div class="otherSkills rellax" data-rellax-speed="3">
+        <h3>AUTRES COMPÉTENCES</h3>
+        <div class="wordCloud">
+            <div class="aos-item"
+                data-aos="fade-zoom-in"
+                data-aos-offset="-300"
+                data-aos-duration="800">
+                <div class="aos-item__inner">
+                    <span style="color:red;margin-left:-90%;">Github</span>
+                </div>
+            </div>
+            <div class="aos-item" 
+                data-aos="fade-zoom-in"
+                data-aos-offset="-200"
+                data-aos-duration="1800">
+                <div class="aos-item__inner">
+                    <span style="color:indigo;margin-left: 50%;">Méthodes agiles</span>
+                </div>
+            </div>
+            <div class="aos-item" 
+                data-aos="fade-zoom-in"
+                data-aos-offset="-100"
+                data-aos-duration="600">
+                <div class="aos-item__inner">
+                    <span style="color:maroon; margin-left: -20%;">Anglais courant</span>
+                </div>
+            </div>
+            <div class="aos-item" 
+                data-aos="fade-zoom-in"
+                data-aos-offset="-200"
+                data-aos-duration="2400">
+                <div class="aos-item__inner">
+                    <span style="color:mediumturquoise; margin-left: -70%;">Redux</span>
+            </div>
+            </div>
+            <div class="aos-item" 
+                data-aos="fade-zoom-in"
+                data-aos-offset="-100"
+                data-aos-duration="1700">
+                <div class="aos-item__inner">
+                    <span style="color: orange; margin-left: 40%">Webpack</span>
+                </div>
+            </div>
+            <div class="aos-item" 
+                data-aos="fade-zoom-in"
+                data-aos-offset="-200"
+                data-aos-duration="1200">
+                <div class="aos-item__inner">
+                    <span style="color: pink;margin-left:-10%">Photoshop</span>
+                </div>
+            </div>
+            <div class="aos-item" 
+                data-aos="fade-zoom-in"
+                data-aos-offset="-200"
+                data-aos-duration="100">
+                <div class="aos-item__inner">
+                    <span style="color:navy; margin-left: -80%;">SEO</span>
+                </div>
+            </div>
+            <div class="aos-item" 
+                data-aos="fade-zoom-in" 
+                data-aos-offset="-300"
+                data-aos-duration="3000">
+                <div class="aos-item__inner">
+                    <span style="color:sandybrown; margin-left: 70%;">UX Design</span>
+                </div>
+            </div>        
+        </div>    
+    </div>
 
-    <div class="hobbies rellax" data-rellax-speed="4">
-        <h3>Hobbies</h3>
+    <div class="hobbies rellax" data-rellax-speed="8">
+        <h3>HOBBIES</h3>
         <div class="pictures">
             <div class="flip-box">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
                         <img src="./media/running.jpg" alt="Runner">
                     </div>
-                    <div class="flip-box-back">
-                        <h2>Running<br>Basket<br>Football</h2>
+                    <div class="flip-box-back" style="background-color: tomato;">
+                        <div>
+                            <p>Running</p>
+                            <p>Basket</p>
+                            <p>Football</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -183,8 +265,11 @@
                     <div class="flip-box-front">
                         <img src="./media/permaculture.jpg" alt="Permaculture">
                     </div>
-                    <div class="flip-box-back">
-                        <h2>Permaculture<br>Jardinage</h2>
+                    <div class="flip-box-back" style="background-color:forestgreen">
+                        <div>
+                            <p>Permaculture</p>
+                            <p>Jardinage</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -193,18 +278,24 @@
                     <div class="flip-box-front">
                         <img src="./media/btc.jpg" alt="Crypto-monnaies">
                     </div>
-                    <div class="flip-box-back">
-                        <h2>Crypto-monnaies<br>Blockchain</h2>
+                    <div class="flip-box-back" style="background-color:mediumblue">
+                        <div>
+                            <p>Crypto-monnaies</p>
+                            <p>Blockchain</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="flip-box">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <img src="./media/lecture.jpeg" alt="lecture">
+                        <img src="./media/science.jpg" alt="high-tech">
                     </div>
-                    <div class="flip-box-back">
-                        <h2>Lecture<br>Livres audio</h2>
+                    <div class="flip-box-back" style="background-color:orange">
+                        <div>
+                            <p>Science</p>
+                            <p>High-tech</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -227,24 +318,18 @@
         <section id="contact">
             <form role="form" id="contactForm" class="contact-form" data-toggle="validator" class="shake">
                 <div class="message">
-                    <div class="row">
-                        <div class="form-group col-lg-6">
-                            <div class="controls">
-                                <input type="text" id="name" class="" placeholder="Nom" required data-error="Entrez votre nom">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="controls">
-                                <input type="email" class="email " id="email" placeholder="Email" required data-error="Veuillez saisir un e-mail correct">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <div class="controls">
-                                <textarea id="message" rows="7" placeholder="Message" class="" required data-error="Quelque chose à me dire ?"></textarea>
-                                <div class="help-block with-errors"></div>
-                            </div>  
-                        </div>
+                    <div class="controls">
+                        <input type="text" id="name" class="" placeholder="Nom" required data-error="Entrez votre nom">
+                        <div class="help-block with-errors"></div>
                     </div>
+                    <div class="controls">
+                        <input type="email" class="email " id="email" placeholder="Email" required data-error="Veuillez saisir un e-mail correct">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="controls">
+                        <textarea id="message" rows="7" placeholder="Message" class="" required data-error="Quelque chose à me dire ?"></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>  
                 </div>
                 <div class="button">
                     <button type="submit" id="submit">Envoyer message</button>
@@ -260,17 +345,19 @@
             </a>
             
         </div>
-        <p>fromScratch(); © 2020 </p>
+        <p><em>fromScratch(); © 2020 </em></p>
 
     </footer>
 
-<script src="./assets/jquery.min.js" type="text/javascript" ></script>
-<script src="./assets/bootstrap.js" type="text/javascript" ></script>
+<script src="./assets/js/jquery.min.js" type="text/javascript" ></script>
+<script src="./assets/js/bootstrap.js" type="text/javascript" ></script>
 <script src="./assets/js/form-validator.min.js" type="text/javascript"></script>  
 <script src="./assets/js/contact-form-script.js" type="text/javascript"></script>
 <script src="./assets/carousel/js/ism-2.2.min.js"></script>
 <script src="./assets/js/typed.js"></script>
 <script src="./assets/js/rellax.min.js"></script>
+<script src="./assets/js/aos-master/dist/aos.js"></script>
+
 
 <script src="./script.js" type="text/javascript" ></script>
 
