@@ -22,7 +22,7 @@ header {
     background-size: cover;
 }
 h1 {
-    padding: 140px 0 20px 0;
+    padding: 40px 0 10px 0;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 5em;
     text-transform: uppercase;
@@ -44,7 +44,7 @@ h1 {
 .line {
     height: 1px;
     background-color: #b3aca7;
-    width: 500px;
+    width: 50%;
     margin: 0 auto;
 
     animation: lineAnim ease-in 0.8s;
@@ -66,7 +66,7 @@ h1 {
     }
 }
 h2 {
-    padding: 30px 0 80px 0;
+    padding: 20px 0 50px 0;
     font-size: 3.3em;
     text-transform: uppercase;
 
@@ -86,7 +86,7 @@ h2 {
 
 .infos {
     border: 1px solid #b3aca7;
-    height: 300px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -96,18 +96,19 @@ h2 {
 }
 .photo {
     border: 1px solid #b3aca7;
-    height: 300px;
+    height: 280px;
     position:relative;
 }
 .photo img {
     position:absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
+    height: auto;
+    max-width: 90%;
 }
-
 .typed {
     font-size: 1.1em;
-    height: 300px;
+    height: 280px;
 }
 header .button {
     margin-top: 60px;
@@ -150,10 +151,10 @@ button a {
 .formation {
     float: right;
     position: relative;
-    margin: 250px 0 -400px 0px;
+    margin: 250px 2% -400px 0px;
     padding: 70px 0 0 25px; 
     height: 570px;
-    width: 60%;
+    width: 50%;
     background: #e51212;
     background: linear-gradient(239deg,#e51212 0%, rgba(238,211,44,0.17) 100%);
     clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 96%);
@@ -169,25 +170,25 @@ button a {
 }
 
 /* ****************PORTFOLIO + HOBBIES ***************** */
-.carousel {
+.portfolio {
     padding: 250px 0 0 0;
 }
-.carousel h3 {
-    text-align: center;
-    font-size: 4em;
-    padding-bottom: 25px;
+.portfolio h3 {
+    margin-left: 7%;
+    padding-bottom: -150px;
+    font-size: 5em;
     text-shadow: -1px 2px 0px #FFBB00;
 }
 .otherSkills {
     margin: 620px 0px 240px 0px !important;
-    padding: 50px 100px;
+    padding: 50px 100px 50px 100px;
     height: 750px;
     width: 100%;
     background-color: #375E97;
     clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 84%);
 }
 .otherSkills h3 {
-    transform: rotate(-4.4deg);
+    transform: rotate(-3.2deg);
     font-size: 3em;
     text-shadow: -1px 1px 0px maroon;
 }
@@ -195,10 +196,11 @@ button a {
     text-align: center;
     padding: 50px 0px;
     font-size: 2em;
+    text-transform: uppercase;
 }
 .hobbies {
-    padding: 200px 50px 150px 50px;
-    margin: 550px 0 -1750px 0;
+    padding: 250px 50px 150px 50px;
+    margin: 550px 0 -1900px 0;
     clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0% 100%);
     background-color: #FFBB00;
 }
@@ -264,6 +266,10 @@ footer h3 {
     padding: 100px 0 80px 0;
     font-size: 3em;
 }
+footer .row {
+    margin: 0 auto;
+    max-width: 70%;
+}
 .network {
     font-size: 4em;
     border: 1px solid #b3aca7;
@@ -323,7 +329,7 @@ input:hover::placeholder,textarea:hover::placeholder, input:hover:focus::placeho
 .arrow {
     width: 50px;
     margin: 0 auto;
-    padding-top: 65px;
+    padding-top: 45px;
 
     animation: arrow linear 1.5s;
     animation-iteration-count: infinite;
@@ -349,4 +355,68 @@ input:hover::placeholder,textarea:hover::placeholder, input:hover:focus::placeho
     transform: scale(1.6);
     transition: 0.5s ease-in-out;
     color: #726659;
+}
+
+
+/* *********** MEDIA QUERIES ************ */
+
+@media screen and (max-width:900px) {
+    .infos h5, .typed {
+        font-size: 0.9em;
+    }
+    .formation {
+        height: 630px;
+    }
+    .hobbies {
+        margin: 650px 0 -2100px 0;
+    }
+    .network {
+        font-size: 2em;
+        padding: 10px 20px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .navbar {
+        display: none;
+    }
+    .fixed-top {
+        position: unset !important;
+    }
+    h1, h2 {
+        font-size: 2em;
+    }
+    .langages  {
+        width: 80%;
+    }
+    .formation {
+        width: 95%;
+    }
+    .portfolio h3 {
+        font-size: 2em;
+    }
+    .otherSkills {
+        height: 550px;
+    }
+    .otherSkills h3, .hobbies h3 {
+        font-size: 2em;
+    }
+    .wordCloud {
+        font-size: 1em;
+    }
+    .hobbies {
+        margin: 580px 0 -1900px 0;
+    }
+    .flip-box-back p {
+        padding: 0px;
+        font-size: 0.7em;;
+    }
+    footer h3 {
+        font-size: 2em;
+    }
+    input, textarea {
+        width: 300px;
+    }
+    footer .row {
+        max-width: 100%;
+    }
 }

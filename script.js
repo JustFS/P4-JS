@@ -7,7 +7,7 @@
     $(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 500) {
-                // $('.navbar').fadeIn();
+                $('.navbar').fadeIn();
             } else {
                 $('.navbar').fadeOut();
             }
@@ -19,8 +19,19 @@
 
 //TEXTE INTRO
 var typed = new Typed('.typed', {
-    strings: ["Bonjour à tous et à toutes, je me présente je m'appelle", "Passionné d'informatique depuis ma plus tendre enfance j'ai eu un parcours de vie qui m'a malheureusement éloigné de ma passion pendants quelques temps. Il y a quelques moi j'ai décidé de quitter mon ennuyant travail dans l'administration pour me lancer à fond dans ma passion d'enfance, je me suis mis à coder, apprendre, dévorer les documentations techniques, Pendant des jours, des semaines puis des mois... Aujourd'hui je me présente devant vous en tant que Développeur Web Front-end autodidacte passioné et surmotivé."],
+    strings: ["Bonjour à tous et à toutes, je me présente je m'appelle", "Passionné d'informatique depuis ma plus tendre enfance j'ai eu un parcours de vie qui m'a malheureusement éloigné de ma passion pendants quelques temps. Mais il y a quelques mois, j'ai décidé de quitter mon ennuyant travail dans l'administration pour me lancer à fond dans ma passion d'enfance, je me suis mis à coder, apprendre, dévorer les documentations techniques, pendant des jours, des semaines puis des mois... Aujourd'hui j'ai acquis un solide bagage de Développeur Web Front-end autodidacte, passioné et motivé."],
     typeSpeed: 30});
+
+// PARALLAX
+var rellax = new Rellax('.rellax');
+
+// AOS
+AOS.init({
+    easing: 'ease-in-out-sine'
+  });
+
+// SWUP (on instancie swup)
+const swup = new Swup();
     
   /// FORMULAIRE
 $(function()
@@ -86,12 +97,3 @@ $(function()
     });	
 });
 
-// PARALLAX
-var rellax = new Rellax('.rellax');
-
-// AOS
-AOS.init({
-    easing: 'ease-in-out-sine'
-  });
-
-// SWUP
