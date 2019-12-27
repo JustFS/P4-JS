@@ -1,0 +1,19 @@
+{
+  "name": "p.4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "prefix": "postcss ./style.css --use autoprefixer -d ./autoprefixer/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustFS/P4-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustFS/P4-JS/issues"
+  },
+  "homepage": "https://github.com/JustFS/P4-JS#readme"
+}
