@@ -1,21 +1,17 @@
-(function ($) {
-/// NAVBAR
+//NAVBAR
+var lastScrollTop = 0;
+navbar = document.getElementById("navbar");
 
-    $(document).ready(function(){
-    $(".navbar").hide();
+window.addEventListener("scroll", function(){
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    $(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 500) {
-                $('.navbar').fadeIn();
-            } else {
-                $('.navbar').fadeOut();
-            }
-        });
-    });
+    if (scrollTop > lastScrollTop){
+        navbar.style.top="-50px";
+    } else {
+        navbar.style.top="0";
+    }
+    lastScrollTop = scrollTop;
 });
-
-}(jQuery));
 
 //TEXTE INTRO
 var typed = new Typed('.typed', {
