@@ -26,9 +26,6 @@ AOS.init({
     easing: 'ease-in-out-sine'
   });
 
-// SWUP (on instancie swup)
-const swup = new Swup();
-    
   /// FORMULAIRE
 $(function()
 {
