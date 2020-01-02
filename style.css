@@ -207,7 +207,7 @@ button a {
 }
 .hobbies {
     padding: 250px 50px 150px 50px;
-    margin: 550px 0 -1900px 0;
+    margin: 500px 0 -1900px 0;
     clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0% 100%);
     background-color: #FFBB00;
 }
