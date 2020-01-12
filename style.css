@@ -11,8 +11,12 @@ body {
 }
 h2, h3 {
     font-family: 'Audiowide', sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
-
+li {
+  list-style-type: none;
+}
 
 /* *************** HEADER**************** */
 .navbar {
@@ -117,6 +121,8 @@ h2 {
     margin: auto;
     height: auto;
     max-width: 90%;
+    border-radius: 3px;
+    box-shadow: 0 0 4px #111;
 }
 .typed {
     font-size: 1.1em;
@@ -142,9 +148,8 @@ button a {
 
 /* ******************** SKILLS ********************* */
 .langages {
-    position: relative;
     padding: 70px 50px;
-    margin: 220px 50px 0 40px;
+    margin: 20px 50px 0 40px;
     height: 580px;
     width: 45%;
     max-width: 600px;
@@ -156,9 +161,8 @@ button a {
     padding-top: 10px;
 }
 .formation {
-    float: right;
     position: relative;
-    margin: 250px 2% -400px 0px;
+    margin: 0 20px 0 auto;
     padding: 70px 0 0 25px; 
     height: 570px;
     width: 50%;
@@ -175,19 +179,138 @@ button a {
     list-style-type: square;
     margin-left: 60px;
 }
-
-/* ****************PORTFOLIO + HOBBIES ***************** */
+/* ******************* PARCOURS ********************* */
+.parcours {
+  min-width: 600px;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 80px 30px;
+  background: url(./media/parcours.jpg)no-repeat fixed 50% 50%;
+  background-size: cover;
+}
+.timeline {
+  border-top: 4px solid;
+  border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  border-image-slice: 1;
+  margin: 0;
+  padding: 40px;
+  position: relative;
+}
+.timeline:nth-child(1) {
+  border-bottom: 3px solid;
+  border-top: none;
+  width: 80%;
+}
+.timeline:nth-child(2) {
+  border-top: none;
+}
+.timeline:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+}
+.parcours:nth-child(odd):before {
+  left: 100%;
+  margin-left: -20px;
+}
+.timeline:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+.timeline:nth-child(even):before {
+  right: 100%;
+  margin-right: -20px;
+}
+.timeline:nth-child(1):after {
+  /* ALT 30 */
+  content: '▲';
+  color: #d53a9d;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  box-sizing: content-box !important;
+}
+/* ****************** PORTFOLIO ********************** */
 .portfolio {
-    padding: 250px 0 0 0;
+  margin: 100px 10px 0 15px;
+  padding: 20px;
+  background-color: rgba(179, 172, 167, 0.08);
 }
-.portfolio h3 {
-    margin-left: 7%;
-    padding-bottom: -150px;
-    font-size: 5em;
-    text-shadow: -1px 2px 0px #FFBB00;
+.projet {
+  display: flex;
 }
+.cadre {
+  position: relative;
+  padding: 40px 20px 25px 0;
+  width: 600px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin: 10px 8px;
+  color: #aca49c;
+  text-align: center;
+}
+.cadre:before, .cadre:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 1px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+  z-index: -1;
+}
+.cadre:before {
+  top: 15px;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #aca49c;
+  border-left-color: #aca49c;
+}
+.cadre:after {
+  bottom: 0px;
+  right: 15px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #aca49c;
+  border-right-color: #aca49c;
+}
+.cadre:hover:before, .cadre:hover:after {
+  border-bottom-color: #aca49c;
+  border-right-color: #aca49c;
+  border-top-color: #aca49c;
+  border-left-color: #aca49c;
+  width: 100%;
+  height: 100%;
+}
+.img-container {
+  height: 250px;
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 1px 1px 10px black;        
+}
+.img-container img {
+  position: relative;
+  height: 350px;
+  margin: 0 auto;
+}
+.img-container:hover img {
+  transform: scale(1.15);
+  transform-origin: 50% 50%;
+  transition: 1s ease-in-out;
+}
+.legende {
+  max-width: 300px;
+  padding: 60px 0 0 0;
+}
+
+
+
+/* ********** OTHER SKILLS + HOBBIES ********** */
 .otherSkills {
-    margin: 620px 0px 240px 0px !important;
+    margin: 20px 0px 240px 0px !important;
     padding: 50px 100px 50px 100px;
     height: 750px;
     width: 100%;
@@ -207,7 +330,7 @@ button a {
 }
 .hobbies {
     padding: 250px 50px 150px 50px;
-    margin: 500px 0 -1900px 0;
+    margin: 50px 0 0px 0;
     clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0% 100%);
     background-color: #FFBB00;
 }
@@ -266,12 +389,12 @@ footer {
     background: url(media/footer.jpg) 50% 0% no-repeat fixed;
     background-size: cover;
     text-align: center;
-    height: 1100px;
-    padding: 150px 50px;
+    /* height: 1100px; */
+    padding: 150px 50px 20px 50px;
 }
 footer h3 {
     padding: 100px 0 80px 0;
-    font-size: 3em;
+    font-size: 2.2em;
 }
 footer .row {
     margin: 0 auto;
@@ -363,9 +486,12 @@ input:hover::placeholder,textarea:hover::placeholder, input:hover:focus::placeho
     transition: 0.5s ease-in-out;
     color: #726659;
 }
+footer p {
+  font-size: 0.9em;
+  letter-spacing: .3em;
+}
 
-
-/* *********** MEDIA QUERIES ************ */
+/* *********** MEDIA QUERIES ************
 
 @media screen and (max-width:900px) {
     .infos h5, .typed {
@@ -426,4 +552,4 @@ input:hover::placeholder,textarea:hover::placeholder, input:hover:focus::placeho
     footer .row {
         max-width: 100%;
     }
-}
+} */
