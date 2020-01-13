@@ -1,12 +1,12 @@
 //NAVBAR
-var lastScrollTop = 0;
+let lastScrollTop = 0;
 navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", function(){
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop){
-        navbar.style.top="-50px";
+        navbar.style.top="-150px";
     } else {
         navbar.style.top="0";
     }
@@ -15,78 +15,42 @@ window.addEventListener("scroll", function(){
 
 //TEXTE INTRO
 var typed = new Typed('.typed', {
-    strings: ["Bonjour à tous et à toutes, je me présente je m'appelle", "Passionné d'informatique depuis ma plus tendre enfance j'ai eu un parcours de vie qui m'a malheureusement éloigné de ma passion pendants quelques temps. Mais il y a quelques mois, j'ai décidé de quitter mon ennuyant travail dans l'administration pour me lancer à fond dans ma passion d'enfance, je me suis mis à coder, apprendre, dévorer les documentations techniques, pendant des jours, des semaines puis des mois... Aujourd'hui j'ai acquis un solide bagage de Développeur Web Front-end autodidacte, passioné et motivé."],
+    strings: ["Bonjour à tous et à toutes, je me présente je m'appelle Henr", "Après une carrière m'ayant fait découvrir plusieurs milieux professionnels et exercer plus de 15 métiers différents. J'ai décidé de me lancer à fond dans l'apprentissage du code, depuis près de 6 mois je me forme à temps plein en autodidacte aux langages Front tels que CSS, Javascript et son Framework React afin devenir le plus rapidement possible développeur. Plus qu'un avenir professionnel, je me suis découvert une passion, celle de coder."],
     typeSpeed: 30});
 
-// PARALLAX
-var rellax = new Rellax('.rellax');
+
+// COMPTEUR LIVE
+let a = 0;
+$(window).scroll(function() {
+
+  const oTop = $('.counter').offset().top - window.innerHeight;
+  
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.counter-value').each(function() {
+      let $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+        {
+          duration: 10000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+        });
+    });
+    a = 1;
+  }
+});
 
 // AOS
 AOS.init({
-    easing: 'ease-in-out-sine'
-  });
-
-  /// FORMULAIRE
-$(function()
-{
-    function after_form_submitted(data) 
-    {
-        if(data.result == 'success')
-        {
-            $('form#reused_form').hide();
-            $('#success_message').show();
-            $('#error_message').hide();
-        }
-        else
-        {
-            $('#error_message').append('<ul></ul>');
-
-            jQuery.each(data.errors,function(key,val)
-            {
-                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
-            });
-            $('#success_message').hide();
-            $('#error_message').show();
-
-            //reverse the response on the button
-            $('button[type="button"]', $form).each(function()
-            {
-                $btn = $(this);
-                label = $btn.prop('orig_label');
-                if(label)
-                {
-                    $btn.prop('type','submit' ); 
-                    $btn.text(label);
-                    $btn.prop('orig_label','');
-                }
-            });
-            
-        }//else
-    }
-
-	$('#reused_form').submit(function(e)
-    {
-        e.preventDefault();
-
-        $form = $(this);
-        //show some response on the button
-        $('button[type="submit"]', $form).each(function()
-        {
-            $btn = $(this);
-            $btn.prop('type','button' ); 
-            $btn.prop('orig_label',$btn.text());
-            $btn.text('Sending ...');
-        });
-        
-
-                    $.ajax({
-                type: "POST",
-                url: 'handler.php',
-                data: $form.serialize(),
-                success: after_form_submitted,
-                dataType: 'json' 
-            });        
-        
-    });	
+  easing: 'ease-in-out-sine'
 });
-
