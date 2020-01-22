@@ -36,7 +36,7 @@ $(function()
     }
 
 	$('#reused_form').submit(function(e)
-    {
+      {
         e.preventDefault();
 
         $form = $(this);
@@ -52,11 +52,11 @@ $(function()
 
                     $.ajax({
                 type: "POST",
-                url: 'handler.php',
+                url: 'assets/form/handler.php',
                 data: $form.serialize(),
                 success: after_form_submitted,
                 dataType: 'json' 
             });        
         
-    });	
+      });	
 });

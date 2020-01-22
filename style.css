@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rambla&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Josefin+Sans:100|Rambla&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -64,11 +62,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
-  padding: 20px 0;
-}
-.typed {
-  font-size: 1.1em;
-  padding: 0 10px;
+  padding: 20px 0 10px 0;
 }
 .photo {
   border: 1px solid #b3aca7;
@@ -98,32 +92,32 @@ header .button:hover a {
   text-decoration:none;
 }
 
-/* ************** LANGUAGES & FORMATION ****************** */
+/* ************** LANGAGES ****************** */
 #langages {
   padding: 80px 80px 80px 50px;
   margin: 20px 0 0 6%;
-  height: 620px;
+  height: 640px;
   width: 47%;
-  max-width: 640px;
-  background: linear-gradient(to right, rgba(252,234,187,1) 0%, rgba(252,205,77,0.99) 3%, rgba(251,218,129,0.75) 74%, rgba(251,223,147,0.75) 99%);
-  clip-path: polygon(3% 10%, 97% 5%, 93% 97%, 3% 88%);
+  max-width: 620px;
+  background: linear-gradient(131deg,#f12711 0%, rgba(245,175,25,0.42) 99%);
+  clip-path: polygon(0 5%, 100% 0, 89% 100%, 0 92%);
 }
 #langages .bar {
   padding: 10px 0 4px 0;
   letter-spacing: 0.1em;
 }
 
+/* ***************** PARCOURS ******************** */
 #formation {
   position: relative;
-  float:right;
-  right: 20px;
   top: -200px;
+  float:right;
   margin: 0 5% 0 0;
-  padding: 85px 0 50px 30px; 
+  padding: 60px 0 60px 50px; 
   width: 45%;
-  max-width: 640px;
-  background: linear-gradient(239deg,#e51212 0%, rgba(238,211,44,0.17) 100%);
-  clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 96%);
+  max-width: 660px;
+  background: linear-gradient(19deg,rgba(0,180,219,0.69) 0%, #0083b0 80%);
+  clip-path: polygon(2% 2%, 100% 0%, 100% 100%, 0 95%);
 }
 #autodidacte {
   padding: 20px 0 0 0;
@@ -138,33 +132,36 @@ header .button:hover a {
   font-weight: bold;
   letter-spacing: 0.08em;
   padding-bottom: 10px;
-  color: #EC7167;
-  text-shadow: -1px -1px 1px #283655;
+  color: #005978;
+  text-shadow: -1px -1px 1px #35B4D5;
 }
 .counter {
   display: flex;
   text-align: center;
 }
 .data {
-  border: 1px solid #EE8478;
-  width: 150px;
-  margin: 0 7%;
-  box-shadow: 0 0 8px #EE8478;
+  border: 1px solid #35B4D5;
+  width: 170px;
+  margin: 0 4%;
+  box-shadow: 0 0 8px #1C9DC4;
+  padding: 5px 20px;
 }
 .counter-value {
   font-size: 2em;
 }
 .data-span {
-  font-size: 2em;;
+  font-size: 1.8em;;
 }
 
 /* ******************* PARCOURS ********************* */
 #parcours {
   max-width: 800px;
-  margin: 570px auto 130px auto;
+  margin: 640px auto 180px auto;
   padding: 40px 30px 100px 30px;
   background: url(./media/parcours.jpg)no-repeat fixed 50% 50%;
   background-size: cover;
+  border-radius: 8px;
+  box-shadow: -1px -1px 8px #283655;
 }
 #parcours h3 {
   font-size: 2.5em;
@@ -212,17 +209,9 @@ header .button:hover a {
   border-right: 3px solid;
   padding-left: 0;
 }
-#parcours:nth-child(odd):before {
-  left: 100%;
-  margin-left: -20px;
-}
 .timeline:nth-child(even) {
   border-left: 3px solid;
   padding-right: 0;
-}
-.timeline:nth-child(even):before {
-  right: 100%;
-  margin-right: -20px;
 }
 
 /* ****************** PORTFOLIO ********************** */
@@ -230,6 +219,7 @@ header .button:hover a {
   margin: 100px 2% 0 2%;
   padding: 40px 10px 60px 40px;
   background-color: rgba(179, 172, 167, 0.08);
+  box-shadow: 0px 0px 1px #a8a8a9;
 }
 #portoflio h3 {
   font-size: 3em;
@@ -237,10 +227,6 @@ header .button:hover a {
 }
 .projet {
   display: flex;
-}
-.projet:hover .legende {
-  opacity: 1;
-  transition: 2s ease;
 }
 .projet:nth-child(2) {
   margin-left: 3%;
@@ -274,9 +260,9 @@ header .button:hover a {
   margin: 0 auto;
 }
 .img-container:hover img {
-  transform: scale(1.05);
+  transform: scale(1.07);
   transform-origin: 50% 50%;
-  filter: contrast(150%);
+  filter: contrast(140%);
   transition: 0.3s ease-in-out;
 }
 .cadre:before, .cadre:after {
@@ -307,10 +293,7 @@ header .button:hover a {
   border-right-color: #aca49c;
 }
 .cadre:hover:before, .cadre:hover:after {
-  border-bottom-color: #aca49c;
-  border-right-color: #aca49c;
-  border-top-color: #aca49c;
-  border-left-color: #aca49c;
+  border-color: #aca49c;
   width: 100%;
   height: 100%;
 }
@@ -318,11 +301,13 @@ header .button:hover a {
   max-width: 350px;
   padding: 50px 0 0 20px;
   opacity: 0;
-  transition-delay: 10s;
-  transition: 0.4 ease-in-out;
+  transition: 5s ease-in-out;
+}
+.projet:hover .legende {
+  opacity: 1;
+  transition: 2s ease;
 }
 .legende a {
-  width: 76;
   padding: 16px 10px 10px 10px;
   margin-top: 20px;
   font-size: 1.1em;
@@ -358,8 +343,7 @@ header .button:hover a {
 /* ***************** OTHER ******************** */
 #other-skills {
     margin: 80px 0px 0px 0px;
-    padding: 50px 100px 50px 100px;
-    height: 750px;
+    padding: 50px 100px 100px 100px;
     width: 100%;
     background-color: #375E97;
     clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 84%);
@@ -394,6 +378,26 @@ header .button:hover a {
   display: flex;
   justify-content: center;
 }
+.flip-box-back div {
+  margin: 0 auto;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+.flip-box-back p {
+  text-transform: uppercase;
+  padding: 10px;
+  font-size-adjust: auto;
+}
+.flip-box-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
 .flip-box {
   overflow: hidden;
   background-color: transparent;
@@ -412,26 +416,6 @@ header .button:hover a {
 }
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
-}
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.flip-box-back {
-  color: white;
-  transform: rotateY(180deg);
-}
-.flip-box-back div {
-  margin: 0 auto;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-}
-.flip-box-back p {
-  text-transform: uppercase;
-  padding: 10px;
-  font-size-adjust: auto;
 }
 
 /* **************** FOOTER ******************* */
@@ -457,13 +441,12 @@ footer .row {
   color: #726659;
   z-index: -1 !important;
 }
-#contact {
-  padding-top: 70px;
+.form-container {
+  padding-top: 20px;
 }
-#form {
+#reused_form {
   position: relative;
-  width: 300px;
-  margin: 50px 0 50px 0;
+  margin: 50px auto 50px auto;
 }
 input {
   font-size: 0.875em;
@@ -487,7 +470,7 @@ textarea {
   color: #726659;
   border: solid 1px #b3aca7;
 }
-.network:hover, textarea:hover, input:hover, #submit:hover {
+.network:hover, textarea:hover, input:hover, .form-button:hover {
   background: #b3aca7;
   color: #e2dedb;
   transition: all 0.3s ease-in-out;
@@ -498,15 +481,35 @@ input::placeholder, textarea::placeholder, input:focus::placeholder, textarea:fo
 input:hover::placeholder,textarea:hover::placeholder, input:hover:focus::placeholder, textarea:hover:focus::placeholder {
   color: #e2dedb;
 }
-#submit {
+.form-button {
   background: transparent;
   border: solid 1px #b3aca7;
-  padding: 20px 55px;
-  margin-top: 16px;
+  padding: 20px 75px;
+  margin: 14px 0 -20px 0;
+}
+.form-container h4 {
+  font-size: 2em;
+}
+#error_message {
+  color: red;
+  border: 1px solid red;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px 15px 10px 15px;
+  box-shadow: 0 0 5px red;
+}
+#success_message {
+  color: green;
+  border: 1px solid green;
+  max-width: 400px;
+  margin: 220px auto;
+  padding: 50px;
+  box-shadow: 0 0 5px green;
+
 }
 .arrow {
   width: 50px;
-  margin: 0 auto;
+  margin: -20px auto;
   padding-top: 15px;
 
   animation: arrow linear 1.5s;
@@ -539,7 +542,6 @@ footer p {
 }
 
 /* *********** MEDIA QUERIES ************ */
-
 @media screen and (max-width:900px) {
   .infos h5, .typed {
     font-size: 0.9em;
@@ -570,6 +572,7 @@ footer p {
   }
   #langages  {
     width: 80%;
+    margin-left: 10%;
   }
   #formation {
     margin: 170px 0 0 10%;
@@ -577,8 +580,17 @@ footer p {
     float: none;
     display: block;
   }
+  .counter-value {
+    font-size: 1em;
+  }
+  .data-span {
+    font-size: .8em;;
+  }
   #parcours {
     margin-top: -50px;
+  }
+  .legende p {
+    display: none;
   }
   #other-skills h3, #hobbies h3 {
     font-size: 2em;

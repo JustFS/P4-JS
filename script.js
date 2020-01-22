@@ -6,9 +6,9 @@ window.addEventListener("scroll", function(){
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop){
-        navbar.style.top="-150px";
+        navbar.style.top="-50px";
     } else {
-        navbar.style.top="0";
+        navbar.style.top="0";  
     }
     lastScrollTop = scrollTop;
 });
@@ -20,12 +20,12 @@ var typed = new Typed('.typed', {
 
 
 // COMPTEUR LIVE
-let a = 0;
+let compteur = 0;
 $(window).scroll(function() {
 
-  const oTop = $('.counter').offset().top - window.innerHeight;
+  const top = $('.counter').offset().top - window.innerHeight;
   
-  if (a == 0 && $(window).scrollTop() > oTop) {
+  if (compteur == 0 && $(window).scrollTop() > top) {
     $('.counter-value').each(function() {
       let $this = $(this),
         countTo = $this.attr('data-count');
@@ -42,11 +42,10 @@ $(window).scroll(function() {
           },
           complete: function() {
             $this.text(this.countNum);
-            //alert('finished');
           }
         });
     });
-    a = 1;
+    compteur = 1;
   }
 });
 
